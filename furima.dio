@@ -1,43 +1,52 @@
-<mxfile host="65bd71144e" modified="2021-03-07T11:36:31.982Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" version="14.2.4" etag="lrEER--YBChXAY87Lvt2" type="embed">
+<mxfile host="65bd71144e" modified="2021-03-08T13:22:06.657Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.54.1 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36" etag="dkDVZ1mnqoJiqMGqotmQ" version="14.2.4" type="embed">
     <diagram id="eZWPkoqCnduVFHR9d-F3" name="ページ1">
-        <mxGraphModel dx="612" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#F1FAEE" math="0" shadow="0">
+        <mxGraphModel dx="612" dy="538" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#F1FAEE" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="67" value="usersテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" vertex="1" parent="1">
+                <mxCell id="67" value="usersテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" vertex="1">
                     <mxGeometry x="10" y="80" width="250" height="230" as="geometry"/>
                 </mxCell>
-                <mxCell id="68" value="nickname・・・ニックネーム&#10;email・・・emailアドレス&#10;password・・・パスワード&#10;last_name・・・名字&#10;first_name・・・名前&#10;last_name_furigana・・・名字（カナ）&#10;first_name_furigana・・・名前（カナ）&#10;birthday_year・・・誕生年&#10;birthday_month・・・誕生月&#10;birthday_day・・・誕生日" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#1D3557;" vertex="1" parent="67">
+                <mxCell id="68" value="nickname・・・ニックネーム&#10;email・・・emailアドレス&#10;password・・・パスワード&#10;last_name・・・名字&#10;first_name・・・名前&#10;last_name_furigana・・・名字（カナ）&#10;first_name_furigana・・・名前（カナ）&#10;birthday・・・誕生年" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#1D3557;" parent="67" vertex="1">
                     <mxGeometry y="30" width="250" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="69" value="itemsテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" vertex="1" parent="1">
+                <mxCell id="69" value="itemsテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" vertex="1">
                     <mxGeometry x="345" y="80" width="265" height="230" as="geometry"/>
                 </mxCell>
-                <mxCell id="70" value="name・・・商品名&#10;description・・・商品説明&#10;category・・・カテゴリー&#10;status・・・商品状態&#10;delivery_fee・・・配送料の負担額&#10;delivery_area・・配送元地域&#10;delivery_date・・・配送日&#10;selling_price・・・販売額" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#1D3557;" vertex="1" parent="69">
+                <mxCell id="70" value="name・・・商品名&#10;description・・・商品説明&#10;category_id・・・カテゴリー&#10;status_id・・・商品状態&#10;delivery_fee_id・・・配送料の負担額&#10;delivery_area_id・・配送元地域&#10;delivery_date_id・・・配送日&#10;selling_price・・・販売額" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#1D3557;" parent="69" vertex="1">
                     <mxGeometry y="30" width="265" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="71" value="ordersテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" vertex="1" parent="1">
-                    <mxGeometry x="150" y="460" width="320" height="250" as="geometry"/>
+                <mxCell id="71" value="ordersテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="350" width="320" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="72" value="card_information・・・カード情報&#10;expiration_month・・・有効期限（月）&#10;expiration_year・・・有効期限（年）&#10;securty_code・・・セキュリティーコード&#10;postal_code・・・郵便番号&#10;prefecture・・・都道府県&#10;municipal・・・市町村区&#10;address・・・番地&#10;building_name・・・建物名&#10;phone_number・・・電話番号" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#1D3557;" vertex="1" parent="71">
-                    <mxGeometry y="30" width="320" height="220" as="geometry"/>
-                </mxCell>
-                <mxCell id="74" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#F1FAEE;strokeColor=#457B9D;fontColor=#1D3557;" edge="1" parent="1" source="68" target="70">
+                <mxCell id="74" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#F1FAEE;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" source="68" target="70" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="320" y="350" as="sourcePoint"/>
                         <mxPoint x="420" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="75" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.438;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=#F1FAEE;strokeColor=#457B9D;fontColor=#1D3557;" edge="1" parent="1" source="68" target="71">
+                <mxCell id="75" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.438;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=#F1FAEE;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" source="68" target="71" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="320" y="350" as="sourcePoint"/>
                         <mxPoint x="420" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="76" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;entryX=0.46;entryY=1.01;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.6;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=#F1FAEE;strokeColor=#457B9D;fontColor=#1D3557;" edge="1" parent="1" source="71" target="70">
+                <mxCell id="76" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;entryX=0.46;entryY=1.01;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.6;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=#F1FAEE;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" source="71" target="70" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="320" y="430" as="sourcePoint"/>
                         <mxPoint x="420" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="82" value="deliveriesテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" vertex="1" parent="1">
+                    <mxGeometry x="185" y="560" width="250" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="postal_code・・・郵便番号&#10;prefecture・・・都道府県&#10;municipal・・・市町村区&#10;address・・・番地&#10;building_name・・・建物名&#10;phone_number・・・電話番号" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#1D3557;" vertex="1" parent="82">
+                    <mxGeometry y="30" width="250" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeColor=#457B9D;" edge="1" parent="1" source="82">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="270" y="490" as="sourcePoint"/>
+                        <mxPoint x="320" y="420" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>
