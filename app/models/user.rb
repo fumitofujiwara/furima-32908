@@ -16,4 +16,5 @@ class User < ApplicationRecord
   validates :last_name_furigana, format:{with: VALID_NAME_FURIGANA }
   validates :first_name_furigana, format:{with: VALID_NAME_FURIGANA }
 
+  has_many :items
 end
