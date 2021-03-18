@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
   belongs_to :user
-  has_many_attached :image
+  has_one_attached :image
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
@@ -19,5 +19,5 @@ class Item < ApplicationRecord
 
   validates :name, length: { maximum: 40 }
   validates :description, length: { maximum: 1000 }
-  validates :selling_price, length: { minimum: 300, maximum: 9999999 }
+  validates :selling_price, numericality: { greather_than_or_equal_to: 300, less_than_or_equal_to: 9999999 }
 end
