@@ -19,5 +19,5 @@ class Item < ApplicationRecord
 
   validates :name, length: { maximum: 40 }
   validates :description, length: { maximum: 1000 }
-  validates :selling_price, numericality: { greather_than_or_equal_to: 300, less_than_or_equal_to: 9999999 }
+  validates :selling_price, numericality: { greather_than_or_equal_to: 300, less_than_or_equal_to: 9999999 }, format: {with: /\A[\d]+\Z/}
 end

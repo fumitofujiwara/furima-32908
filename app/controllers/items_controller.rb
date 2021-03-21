@@ -1,14 +1,20 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @items = Item.all
   end
   def new
+
     @item = Item.new
   end
   def create
     @item = Item.create(item_params)
-    @item.save
-    root_path
+    if @item.save
+      render :index
+    else
+      render :new
+    end
   end
 
   private
