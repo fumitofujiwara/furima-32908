@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :items
   #with_optionsでまとめて空のデータは登録できないバリデーションの設定
   with_options presence: true do
     validates :nickname, :last_name, :first_name, :last_name_furigana, :first_name_furigana, :birthday
@@ -15,5 +16,6 @@ class User < ApplicationRecord
   VALID_NAME_FURIGANA = /\A[ァ-ヶー]+\Z/
   validates :last_name_furigana, format:{with: VALID_NAME_FURIGANA }
   validates :first_name_furigana, format:{with: VALID_NAME_FURIGANA }
+
 
 end
