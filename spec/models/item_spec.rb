@@ -83,6 +83,16 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include "Selling price is not a number"
       end
+      it 'selling_priceが半角英語だけでは投稿できない' do
+        @item.selling_price = "aaa"
+        @item.valid?
+        expect(@item.errors.full_messages).to include "Selling price is not a number"
+      end
+      it 'selling_priceが半角英数字混合では投稿できない' do
+        @item.selling_price = "1234a"
+        @item.valid?
+        expect(@item.errors.full_messages).to include "Selling price is not a number"
+      end
       it 'nameが40文字以上だと投稿できない' do
         @item.name = "a" * 41
         @item.valid?
