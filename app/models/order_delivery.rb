@@ -10,9 +10,6 @@ class OrderDelivery
   validates :delivery_area_id, numericality: { other_than: 1 }
 
   def save
-    binding.pry
-    #user = User.find(params[:id])
-    #item = Item.find(params[:item_id])
     order = Order.create(user_id: user_id, item_id: item_id)
     Delivery.create(postal_code: postal_code, delivery_area_id: delivery_area_id, municipal_district: municipal_district, address: address, building_name: building_name, phone_number: phone_number, order_id: order.id)
   end
