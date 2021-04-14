@@ -7,7 +7,7 @@ RSpec.describe OrderDelivery, type: :model do
 
   describe '商品購入機能' do
     context '商品が購入できるとき' do
-      it 'postal_code,delivery_area_id,municipal_district,address,building_name,phone_numberが存在すると購入できる' do
+      it 'token,postal_code,delivery_area_id,municipal_district,address,building_name,phone_numberが存在すると購入できる' do
         expect(@order_delivery).to be_valid
       end
       it 'building_nameが存在しなくても購入できる。' do
@@ -16,6 +16,12 @@ RSpec.describe OrderDelivery, type: :model do
       end
     end
     context '商品が購入できないとき' do
+      it 'tokenが空では購入できない' do
+        @order_delivery.token = ''
+        @order_delivery.valid?
+        binding.pry
+        expect(@order_delivery.errors.full_messages).to include "Token can't be blank"
+      end
       it 'postal_codeが空では購入できない' do
         @order_delivery.postal_code = ''
         @order_delivery.valid?
