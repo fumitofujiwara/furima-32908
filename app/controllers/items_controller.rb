@@ -56,7 +56,6 @@ class ItemsController < ApplicationController
   end
 
   def after_order
-    redirect_to item_path(@item.id) unless @item.order == nil
+    redirect_to item_path(@item.id) unless @item.order.nil?
   end
-
 end

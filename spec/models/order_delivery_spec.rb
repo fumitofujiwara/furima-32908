@@ -25,17 +25,18 @@ RSpec.describe OrderDelivery, type: :model do
       it 'postal_codeが空では購入できない' do
         @order_delivery.postal_code = ''
         @order_delivery.valid?
-        expect(@order_delivery.errors.full_messages).to include "Postal code can't be blank", "Postal code is invalid. Include hyphen(-)"
+        expect(@order_delivery.errors.full_messages).to include "Postal code can't be blank",
+                                                                'Postal code is invalid. Include hyphen(-)'
       end
       it 'postal_codeにハイフンがなければ購入できない' do
         @order_delivery.postal_code = '1111111'
         @order_delivery.valid?
-        expect(@order_delivery.errors.full_messages).to include "Postal code is invalid. Include hyphen(-)"
+        expect(@order_delivery.errors.full_messages).to include 'Postal code is invalid. Include hyphen(-)'
       end
       it 'delivery_area_idが1だと購入できない' do
         @order_delivery.delivery_area_id = 1
         @order_delivery.valid?
-        expect(@order_delivery.errors.full_messages).to include "Delivery area must be other than 1"
+        expect(@order_delivery.errors.full_messages).to include 'Delivery area must be other than 1'
       end
       it 'municipal_districtが空では購入できない' do
         @order_delivery.municipal_district = ''
@@ -50,17 +51,17 @@ RSpec.describe OrderDelivery, type: :model do
       it 'phone_numberが空では登録できない' do
         @order_delivery.phone_number = ''
         @order_delivery.valid?
-        expect(@order_delivery.errors.full_messages).to include "Phone number can't be blank", "Phone number is invalid"
+        expect(@order_delivery.errors.full_messages).to include "Phone number can't be blank", 'Phone number is invalid'
       end
       it 'phone_numberが12桁以上では登録できない' do
         @order_delivery.phone_number = '111111111111'
         @order_delivery.valid?
-        expect(@order_delivery.errors.full_messages).to include "Phone number is invalid"
+        expect(@order_delivery.errors.full_messages).to include 'Phone number is invalid'
       end
       it 'phone_numberにハイフンを入れると登録できない' do
-          @order_delivery.phone_number = '11-111-1111'
-          @order_delivery.valid?
-          expect(@order_delivery.errors.full_messages).to include "Phone number is invalid"
+        @order_delivery.phone_number = '11-111-1111'
+        @order_delivery.valid?
+        expect(@order_delivery.errors.full_messages).to include 'Phone number is invalid'
       end
     end
   end
