@@ -4,7 +4,7 @@ class OrderDelivery
                 :phone_number
 
   with_options presence: true do
-    validates :token, :postal_code, :municipal_district, :address, :phone_number
+    validates :user_id, :item_id, :token, :postal_code, :municipal_district, :address, :phone_number
   end
   validates :postal_code, format: { with: /\A[0-9]{3}-[0-9]{4}\Z/, message: 'is invalid. Include hyphen(-)' }
   validates :phone_number, format: { with: /\A[0-9]{3,11}\Z/ }
