@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :items
+  has_many :orders
+
   # with_optionsでまとめて空のデータは登録できないバリデーションの設定
   with_options presence: true do
     validates :nickname, :last_name, :first_name, :last_name_furigana, :first_name_furigana, :birthday
