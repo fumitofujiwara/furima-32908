@@ -2,7 +2,11 @@ require 'rails_helper'
 
 RSpec.describe OrderDelivery, type: :model do
   before do
-    @order_delivery = FactoryBot.build(:order_delivery)
+    @user = FactoryBot.create(:user)
+    @item = FactoryBot.create(:item)
+    #user_id:の中に@user.idをitem_idの中に@item.idを保存する。
+    @order_delivery = FactoryBot.build(:order_delivery, user_id: @user.id, item_id: @item.id)
+    sleep 0.1
   end
 
   describe '商品購入機能' do

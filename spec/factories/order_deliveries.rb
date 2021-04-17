@@ -1,8 +1,6 @@
 FactoryBot.define do
   factory :order_delivery do
     token              { 'tok_abcdefghijk00000000000000000' }
-    user_id            { 1 }
-    item_id            { 1 }
     postal_code        { '000-0000' }
     delivery_area_id   { 2 }
     municipal_district { '大分' }

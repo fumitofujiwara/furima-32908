@@ -3,5 +3,4 @@ class Delivery < ApplicationRecord
   belongs_to :delivery_area
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :delivery_area
 end

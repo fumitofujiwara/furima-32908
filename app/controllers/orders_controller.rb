@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_order
   before_action :move_to_index
-  before_action :after_order, only: [:index, :show]
+  before_action :after_order, only: [:index, :create]
 
   def index
     @order_delivery = OrderDelivery.new
