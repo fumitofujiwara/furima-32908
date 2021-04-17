@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_order
   before_action :move_to_index
+  before_action :after_order, only: [:index, :show]
 
   def index
     @order_delivery = OrderDelivery.new
@@ -41,6 +42,10 @@ class OrdersController < ApplicationController
       card: order_params[:token],
       currency: 'jpy'
     )
+  end
+
+  def after_order
+    redirect_to item_path(@item.id) unless @item.order == nil
   end
 
 end
