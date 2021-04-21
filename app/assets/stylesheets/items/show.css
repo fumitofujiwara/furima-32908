@@ -178,11 +178,14 @@
 .comment-flag {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
-.comment-flag-icon {
-  margin: 10px 5px 0 0;
+.comment{
+  border: 0px none;
+  background-color: #3CCACE;
 }
+
 
 .links {
   display: flex;
