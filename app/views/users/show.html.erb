@@ -1,0 +1,43 @@
+<%= render "shared/header" %>
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}さんの投稿商品"%>
+      </h2>
+    <ul class='item-lists'>
+        <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
+      <% @items.each do |item| %>
+        <li class='list'>
+          <%= link_to item_path(item.id) do %>
+          <div class='item-img-content'>
+            <%= image_tag item.image, class: "item-img" %>
+
+          <% if item.order %>
+            <div class='sold-out'>
+              <span>Sold Out!!</span>
+            </div>
+          <% end %>
+
+          </div>
+          <div class='item-info'>
+            <h3 class='item-name'>
+             <%= item.name %>
+            </h3>
+            <div class='item-price'>
+              <span><%= item.selling_price %>円<br><%= item.delivery_fee.name %></span>
+              <div class='star-btn'>
+                <%= image_tag "star.png", class:"star-icon" %>
+                <span class='star-count'>0</span>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
