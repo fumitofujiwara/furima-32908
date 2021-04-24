@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :items do
     resources :orders, only: [:index, :create]
     resources :comments, only: :create
+    resources :favorites, only: [:create, :show]
   end
   resources :users, only: :show
 end

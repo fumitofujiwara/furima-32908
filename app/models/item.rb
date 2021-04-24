@@ -3,6 +3,7 @@ class Item < ApplicationRecord
   has_one_attached :image
   has_one :order
   has_many :comments, dependent: :destroy
+  has_one :favorite, dependent: :destroy
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category

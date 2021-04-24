@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :items
   has_many :orders
   has_many :comments
+  has_many :favorites
 
   # with_optionsでまとめて空のデータは登録できないバリデーションの設定
   with_options presence: true do
