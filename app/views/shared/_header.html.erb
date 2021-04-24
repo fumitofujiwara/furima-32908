@@ -13,9 +13,11 @@
     <ul class='lists-left'>
       <li><%= link_to 'カテゴリー', "#", class: "category-list" %></li>
       <li><%= link_to 'ブランド', "#", class: "brand-list" %></li>
+
     </ul>
     <ul class='lists-right'>
       <% if user_signed_in? %>
+       <li><%= link_to 'お気に入り一覧', "#", class:"favorite-corner" %>
        <li><%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %></li> 
        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %> </li>
       <% else %>

@@ -77,6 +77,11 @@
   align-items: flex-end;
 }
 
+.favorite-corner {
+  text-decoration: none;
+  color: #333333;
+  margin-right: 3vw;
+}
 
 .user-nickname {
   text-decoration: none;
