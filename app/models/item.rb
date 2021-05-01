@@ -3,7 +3,7 @@ class Item < ApplicationRecord
   has_one_attached :image
   has_one :order
   has_many :comments, dependent: :destroy
-  has_one :favorite, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
@@ -25,4 +25,5 @@ class Item < ApplicationRecord
   validates :description, length: { maximum: 1000 }
   validates :selling_price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 },
                             format: { with: /\A\d+\Z/ }
+
 end

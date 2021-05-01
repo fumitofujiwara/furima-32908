@@ -24,6 +24,7 @@ class ItemsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @item.comments.includes(:user)
+    @favorite = Favorite.show
   end
 
   def edit
@@ -40,6 +41,10 @@ class ItemsController < ApplicationController
   def destroy
     @item.destroy
     redirect_to root_path
+  end
+
+  def favorites
+    @item = current_user.favorite_items.includes(:user)
   end
 
   private

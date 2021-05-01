@@ -65,10 +65,15 @@
       </tbody>
     </table>
     <div class="option">
-      <div class="favorite-btn">
-        <%= image_tag "star.png" ,class:"favorite-star-icon" ,id:"favorite-icon", width:"20",height:"20"%>
-        <span>お気に入り 0</span>
-      </div>
+      <%# if @item.favorites.user.id == current_user.id && @item.favorites.item_id == item_id %>
+        <%# link_to "☆", item_favorite_path(@item.favorite.id), method: :delete, class:"favorite-star-icon",id:"favorite-icon", width:"20",height:"20"%>
+        <span><%#お気に入り%> <%#= @item.favorites.length %></span>
+      <%# else %>
+      <%= form_with(model: [@item, @favorite],class:"favorite-btn", local: true) do |f| %>
+        <%= f.submit "★" , class:"favorite-star-icon" ,id:"favorite-icon", width:"20",height:"20"%>
+        <span>お気に入り <%= @item.favorites.length %></span>
+      <% end %>
+      <%# end %>
       <div class="report-btn">
         <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
         <span>不適切な商品の通報</span>
@@ -86,10 +91,7 @@
           <br>
           不快な言葉遣いなどは利用制限や退会処分となることがあります。
         </p>
-
-
           <%= f.submit "コメントする", class:"comment-btn" %>
-
       <% end %>
       <div class="comments_list">
         【コメント一覧】
